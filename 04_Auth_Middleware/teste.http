@@ -1,0 +1,46 @@
+GET http://localhost:3001/health
+
+###
+
+GET http://localhost:3001/users
+
+###
+
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john222@teste.com",
+  "password": "12345996"
+}
+
+###
+
+PUT http://localhost:3001/users/2
+Content-Type: application/json
+
+{
+  "name": "John Doe Silver"
+}
+
+###
+
+PUT http://localhost:3001/users/2
+Content-Type: application/json
+Authorization: Bearer xxxxx
+
+{
+  "name": "John Doe Silver"
+}
+###
+////////////////
+//LOGIN
+
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+  "email": "john222@teste.com",
+  "password": "12345996"
+}
